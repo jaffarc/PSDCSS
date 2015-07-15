@@ -1,0 +1,13 @@
+.DS_Store
+.Thumbs
+.npm
+config.rb
+node_modules
+content/web_resources/**/minified
+Documentacao
+grafico-js
+Gruntfile_.js
+content/www/bin
+content/www/teste
+content/www/js/general-min-un.js
+content/www/css/general-min-un.css

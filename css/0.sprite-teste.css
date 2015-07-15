@@ -1,0 +1,45 @@
+.teste {
+	background: url(../img/teste.png);
+	background-repeat: no-repeat;
+	display:block;
+}
+.teste.facebook:hover {
+	background-position: -16px -270px;
+	height: 46px;
+	width: 46px;
+}
+.teste.facebook {
+	background-position: -65px -270px;
+	height: 46px;
+	width: 46px;
+}
+.teste.twitter:hover {
+	background-position: -229px -205px;
+	height: 46px;
+	width: 46px;
+}
+.teste.twitter {
+	background-position: -229px -157px;
+	height: 46px;
+	width: 46px;
+}
+.teste.rss {
+	background-position: -275px -67px;
+	height: 46px;
+	width: 46px;
+}
+.teste.rss:hover {
+	background-position: -275px -14px;
+	height: 46px;
+	width: 46px;
+}
+.teste.red {
+	background-position: -16px -113px;
+	height: 85px;
+	width: 95px;
+}
+.teste.verder {
+	background-position: -16px -14px;
+	height: 85px;
+	width: 95px;
+}
