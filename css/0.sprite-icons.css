@@ -1,0 +1,25 @@
+.icons {
+	background: url(../img/icons.png);
+	background-repeat: no-repeat;
+	display:block;
+}
+.icons.editFoto {
+	background-position: -43px -29px;
+	height: 19px;
+	width: 19px;
+}
+.icons.Cloud {
+	background-position: -1px -30px;
+	height: 18px;
+	width: 31px;
+}
+.icons.User {
+	background-position: -33px -1px;
+	height: 22px;
+	width: 20px;
+}
+.icons.config {
+	background-position: -1px -1px;
+	height: 24px;
+	width: 23px;
+}

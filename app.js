@@ -15,8 +15,6 @@ fs.readdir(dir,function (err,files) {
     	
 		psd = PSD.fromFile(dir+files[i]);
 		psd.parse();
-		//	node = psd.tree().descendants()[i];    
-		//	teste = psd.tree().export();
 
 		var Item = psd.tree().export().children,
 				css='', css1='';
@@ -30,8 +28,6 @@ fs.readdir(dir,function (err,files) {
 					top = Item[a].top, 
 					visible = Item[a].visible,
 					left = Item[a].left; 
-
-//		 	console.log(docNome);
 
 			if(type === 'layer' && visible === true ) {
 			
@@ -58,7 +54,6 @@ fs.readdir(dir,function (err,files) {
 			}
 		};
 
-		//console.log(css1);
 
 		createFileCss('0.sprite-'+docNome, css);
 		createFileCss('1.'+docNome, css1);
@@ -73,25 +68,17 @@ fs.readdir(dir,function (err,files) {
 
 
 function createFileCss (name, cs) {
-var stream, 
-	nome = './css/'+name+'.css';
+	var stream, 
+		nome = './css/'+name+'.css';
 
 	fs.exists(nome, function (exists) { 
-			//console.log(/(^.\/css\/0.sprite\-)/i.test(nome)); 
-  		if (exists) {
-  			if(/(^.\/css\/0.sprite\-)/i.test(nome)){
-  			 	stream = fs.createWriteStream(nome);
-  				stream.once('open', function (fd) {
-					stream.write(cs);
-					stream.end();
-				}); 
-  			}
-   		}else if(!exists && !/(^.\/css\/0.sprite\-)/i.test(nome)){
-			stream = fs.createWriteStream(nome);
-			stream.once('open', function (fd) {
+  		
+  		if (!exists || /(0.sprite\-)/i.test(nome) ===  true) {
+  			stream = fs.createWriteStream(nome);
+				stream.once('open', function (fd) {
 				stream.write(cs);
 				stream.end();
-			});
+			}); 
    		} 
 	});
 };
