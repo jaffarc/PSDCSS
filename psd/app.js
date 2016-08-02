@@ -57,7 +57,7 @@ fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 		};
 
 
-		createFileCss('_sprite_'+docNome, css);
+		createFileCss('_one'+docNome, css);
 		createFileCss('_'+docNome, css1);
   	
   	psd.image.saveAsPng(path.join(path.dirname(process.env.OLDPWD)).replace('projects', '')+'/www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
@@ -75,7 +75,7 @@ function createFileCss (name, cs) {
 
 	fs.exists(nome, function (exists) { 
   		
-  		if (!exists || /(_sprite\-)/i.test(nome) ===  true) {
+  		if (!exists || /(_)/i.test(nome) ===  true) {
   			stream = fs.createWriteStream(nome);
 				stream.once('open', function (fd) {
 				stream.write(cs);
