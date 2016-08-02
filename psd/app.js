@@ -57,8 +57,8 @@ fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 		};
 
 
-		createFileCss('0.sprite-'+docNome, css);
-		createFileCss('1.'+docNome, css1);
+		createFileCss('_sprite_'+docNome, css);
+		createFileCss('_'+docNome, css1);
   	
   	psd.image.saveAsPng(path.join(path.dirname(process.env.OLDPWD)).replace('projects', '')+'/www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
 			       
