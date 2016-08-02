@@ -8,18 +8,20 @@ var PSD = require('psd'),
 		psd, 
 		i=0,
 		dir= path.join(path.dirname(fs.realpathSync(__filename)))+'/';
+		//console.log(path.join(path.dirname(fs.realpathSync(process.env.OLDPWD))))
+		//console.log()
 
-fs.readdir(dir,function (err,files) {
+fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 
   files.forEach(function (file) {
+		console.log(file);
     	
-		psd = PSD.fromFile(dir+files[i]);
+		psd = PSD.fromFile(process.env.OLDPWD+'/psd/'+files[i]);
 		psd.parse();
 
 		var Item = psd.tree().export().children,
 				css='', css1='';
 				docNome = file.replace(/(.psd)/g, "");
-			
 		for (var a = 0; a < Item.length; ++a) {
 		  var nome = Item[a].name, 
 					type = Item[a].type,
@@ -58,7 +60,7 @@ fs.readdir(dir,function (err,files) {
 		createFileCss('0.sprite-'+docNome, css);
 		createFileCss('1.'+docNome, css1);
   	
-  	psd.image.saveAsPng('./www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
+  	psd.image.saveAsPng(path.join(path.dirname(process.env.OLDPWD)).replace('projects', '')+'/www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
 			       
     i++;
   		
@@ -69,7 +71,7 @@ fs.readdir(dir,function (err,files) {
 
 function createFileCss (name, cs) {
 	var stream, 
-		nome = './projects/styles/sass/components/'+name+'.css';
+		nome = path.join(path.dirname(fs.realpathSync(process.env.OLDPWD)))+'/site/styles/sass/scss/components/'+name+'.css';
 
 	fs.exists(nome, function (exists) { 
   		
