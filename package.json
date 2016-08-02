@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "create psd split css",
   "main": "app.js",
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "bin": {
-    "psdcss": "./bin/psd"
+    "psd": "./bin/psd"
   },
+  "keywords": [
+    "PSD",
+    "CSS",
+    "cli"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jaffarc/PSDCSS.git"

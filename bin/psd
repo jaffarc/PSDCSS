@@ -3,6 +3,6 @@
 "use strict";
 var path = require('path');
 var fs = require('fs');
-var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../');
-//console.log(lib)
-require(lib+'/app.js');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../psd');
+
+require(lib+'app.js');
