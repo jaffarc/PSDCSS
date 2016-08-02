@@ -14,7 +14,7 @@ var PSD = require('psd'),
 fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 
   files.forEach(function (file) {
-		console.log(file);
+		
     	
 		psd = PSD.fromFile(process.env.OLDPWD+'/psd/'+files[i]);
 		psd.parse();
