@@ -71,7 +71,7 @@ fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 
 function createFileCss (name, cs) {
 	var stream, 
-		nome = path.join(path.dirname(fs.realpathSync(process.env.OLDPWD)))+'/site/styles/sass/scss/components/'+name+'.css';
+		nome = path.join(path.dirname(fs.realpathSync(process.env.OLDPWD)))+'/site/styles/sass/scss/components/'+name+'.scss';
 
 	fs.exists(nome, function (exists) { 
   		
