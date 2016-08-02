@@ -75,7 +75,7 @@ function createFileCss (name, cs) {
 
 	fs.exists(nome, function (exists) { 
   		
-  		if (!exists || /(0.sprite\-)/i.test(nome) ===  true) {
+  		if (!exists || /(_sprite\-)/i.test(nome) ===  true) {
   			stream = fs.createWriteStream(nome);
 				stream.once('open', function (fd) {
 				stream.write(cs);
