@@ -7,7 +7,7 @@ var PSD = require('psd'),
 		docNome,
 		psd, 
 		i=0,
-		dir='./psd/';
+		dir= path.join(path.dirname(fs.realpathSync(__filename));
 
 fs.readdir(dir,function (err,files) {
 
