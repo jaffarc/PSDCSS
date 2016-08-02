@@ -58,7 +58,7 @@ fs.readdir(dir,function (err,files) {
 		createFileCss('0.sprite-'+docNome, css);
 		createFileCss('1.'+docNome, css1);
   	
-  	psd.image.saveAsPng('./img/'+files[i].replace(/(.psd)/g, ".png"));
+  	psd.image.saveAsPng('./www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
 			       
     i++;
   		
@@ -69,7 +69,7 @@ fs.readdir(dir,function (err,files) {
 
 function createFileCss (name, cs) {
 	var stream, 
-		nome = './css/'+name+'.css';
+		nome = './projects/styles/sass/components/'+name+'.css';
 
 	fs.exists(nome, function (exists) { 
   		
