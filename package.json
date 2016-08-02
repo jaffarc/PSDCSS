@@ -2,7 +2,7 @@
   "name": "psd",
   "version": "1.0.0",
   "description": "create psd split css",
-  "main": "app.js",
+  "main": "./psd/app.js",
   "preferGlobal": true,
   "bin": {
     "psd": "./bin/psd"
@@ -16,7 +16,6 @@
     "type": "git",
     "url": "git+https://github.com/jaffarc/PSDCSS.git"
   },
-
   "author": "jaffar cardoso",
   "license": "ISC",
   "bugs": {
@@ -24,6 +23,10 @@
   },
   "homepage": "https://github.com/jaffarc/PSDCSS#readme",
   "devDependencies": {
+    "fs": "0.0.2",
+    "psd": "3.1.0"
+  },
+  "dependencies": {
     "fs": "0.0.2",
     "psd": "3.1.0"
   }
