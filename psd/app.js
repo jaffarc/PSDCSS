@@ -1,7 +1,7 @@
 /*jslint indent: 2, maxlen: 120, maxerr: 10, white: true, browser: true, devel: true, nomen: true, sloppy: true, unparam:true */
 /*global */
 
-var PSD = require('psd'),
+const PSD = require('psd'),
 		path = require('path'),
 		fs = require('fs'),
 		docNome,
@@ -10,10 +10,13 @@ var PSD = require('psd'),
 		dir= path.join(path.dirname(fs.realpathSync(__filename)))+'/';
 		//console.log(path.join(path.dirname(fs.realpathSync(process.env.OLDPWD))))
 		//console.log()
+		
+
+
 
 fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 
-  files.forEach(function (file) {
+  	files.forEach(function (file) {
 		
     	
 		psd = PSD.fromFile(process.env.OLDPWD+'/psd/'+files[i]);
@@ -23,13 +26,13 @@ fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 				css='', css1='';
 				docNome = file.replace(/(.psd)/g, "");
 		for (var a = 0; a < Item.length; ++a) {
-		  var nome = Item[a].name, 
-					type = Item[a].type,
-					width = Item[a].width, 
-					height = Item[a].height, 
-					top = Item[a].top, 
-					visible = Item[a].visible,
-					left = Item[a].left; 
+		  	var nome = Item[a].name, 
+				type = Item[a].type,
+				width = Item[a].width, 
+				height = Item[a].height, 
+				top = Item[a].top, 
+				visible = Item[a].visible,
+				left = Item[a].left; 
 
 			if(type === 'layer' && visible === true ) {
 			
@@ -60,12 +63,10 @@ fs.readdir(process.env.OLDPWD+'/psd/',function (err,files) {
 		createFileCss('_one'+docNome, css);
 		createFileCss('_'+docNome, css1);
   	
-  	psd.image.saveAsPng(path.join(path.dirname(process.env.OLDPWD)).replace('projects', '')+'/www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
+  		psd.image.saveAsPng(path.join(path.dirname(process.env.OLDPWD)).replace('projects', '')+'/www/public/img/'+files[i].replace(/(.psd)/g, ".png"));
 			       
-    i++;
-  		
-    
-  });
+    	i++;
+  	});
 });
 
 
