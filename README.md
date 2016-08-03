@@ -1,6 +1,6 @@
 ## installed
 	
-	sudo npm install https://github.com/jaffarc/PSDCSS.git#terminal -g
+	sudo npm install https://github.com/jaffarc/PSDCSS.git -g
 
 ## Usage
 	
