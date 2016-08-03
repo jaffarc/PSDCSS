@@ -7,14 +7,14 @@ var PSD = require('psd'),
 		docNome,
 		psd, 
 		i=0,
-		pathCss,
+		pathCss, typeStyle,
 		dir= path.join(path.dirname(fs.realpathSync(__filename)))+'/';
 		
 		
 require("glob").glob(process.env.PWD+"/psd.json", function (er, file) {
 	var confPath = JSON.parse(fs.readFileSync(process.env.PWD+"/psd.json", 'utf8'))
 	pathCss = confPath.conf[0].css;
-	
+	typeStyle = confPath.conf[0].style;
 	fs.readdir(process.env.PWD+'/projects/site/psd/',function (err,files) {
 			
 		
@@ -75,7 +75,7 @@ require("glob").glob(process.env.PWD+"/psd.json", function (er, file) {
 
 function createFileCss (name, cs) {
 	var stream, 
-		nome = process.env.PWD+pathCss+name+'.scss';
+		nome = process.env.PWD+pathCss+name+'.'+typeStyle;
 
 	fs.exists(nome, function (exists) { 
   		
