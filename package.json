@@ -1,16 +1,17 @@
 {
     "name": "psdcss",
-    "version": "2.0.1",
+    "version": "2.0.5",
     "description": "create css or scss to psd",
     "main": "./psd/app.js",
     "preferGlobal": true,
     "bin": {
-        "psd": "./bin/psd"
+        "psdcss": "./bin/psd"
     },
     "keywords": [
-        "PSD",
-        "CSS",
-        "cli"
+        "psd",
+        "css3",
+        "photoshop",
+        "sass"
     ],
     "repository": {
         "type": "git",

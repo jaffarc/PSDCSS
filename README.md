@@ -1,6 +1,11 @@
-## Usage
+# Installation
+
+	Either through forking or by using [npm](http://npmjs.org) (the recommended way):
+
+    npm install -g psdcss
+# Usage
 	
-	run: psd
+	project/www $ psdcss
 
 
 ## Pattern  
