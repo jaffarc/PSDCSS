@@ -1,7 +1,3 @@
-## installed
-	
-	sudo npm install https://github.com/jaffarc/PSDCSS.git -g
-
 ## Usage
 	
 	run: psd
