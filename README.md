@@ -23,6 +23,7 @@
 		"conf" : [{
 			"psd":  "/projects/site/psd/",
 			"css" : "/projects/site/styles/sass/scss/components/",
+			"style": "css",
 			"img" : "/www/public/img/"
 		}]
 	
