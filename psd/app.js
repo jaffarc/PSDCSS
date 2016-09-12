@@ -1,7 +1,7 @@
 /*jslint indent: 2, maxlen: 120, maxerr: 10, white: true, browser: true, devel: true, nomen: true, sloppy: true, unparam:true */
 /*global */
 
-var PSD = require('psd'),
+const PSD = require('psd'),
 		path = require('path'),
 		fs = require('fs'),
 		docNome,
@@ -12,7 +12,7 @@ var PSD = require('psd'),
 		
 		
 require("glob").glob(process.env.PWD+"/psd.json", function (er, file) {
-	var confPath = JSON.parse(fs.readFileSync(process.env.PWD+"/psd.json", 'utf8'))
+	var confPath = JSON.parse(fs.readFileSync(process.env.PWD+"/psd.json", 'utf8'));
 	pathCss = confPath.conf[0].css;
 	typeStyle = confPath.conf[0].style;
 	pathPsd   = confPath.conf[0].psd;

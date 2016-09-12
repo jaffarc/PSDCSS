@@ -1,6 +1,6 @@
 {
     "name": "psdcss",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "description": "create css or scss to psd",
     "main": "./psd/app.js",
     "preferGlobal": true,
